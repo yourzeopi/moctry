@@ -1,0 +1,35 @@
+// CREATE USER ======================================
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "Azizul",
+    "email" : "azizul@gmail.com",
+    "password" : "fakyu",
+    "confPassword" : "fakyu",
+    "role" : "user"
+}
+
+// GET ALL USER DATA ================================
+###
+GET http://localhost:5000/users
+
+// GET ONE USER DATA BY ID ==========================
+###
+GET http://localhost:5000/users/eb128b21-89c9-4fec-af32-0fe0f41e754a
+
+// UPDATE DATA USER BY ID ============================
+###
+PATCH http://localhost:5000/users/eb128b21-89c9-4fec-af32-0fe0f41e754a
+Content-Type: application/json
+
+{
+    "name" : "Moces",
+    "email" : "moces@gmail.com",
+    "password" : "",
+    "confPassword" : "",
+    "role" : "admin"
+}
+
+###
+DELETE http://localhost:5000/users/2daee9fa-6df4-47be-83a0-9197104096f5
