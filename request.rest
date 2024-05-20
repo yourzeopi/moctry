@@ -3,8 +3,8 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name" : "Azizul",
-    "email" : "azizul@gmail.com",
+    "name" : "Azgif",
+    "email" : "azgif@gmail.com",
     "password" : "fakyu",
     "confPassword" : "fakyu",
     "role" : "user"
@@ -14,22 +14,82 @@ Content-Type: application/json
 ###
 GET http://localhost:5000/users
 
+
 // GET ONE USER DATA BY ID ==========================
 ###
-GET http://localhost:5000/users/eb128b21-89c9-4fec-af32-0fe0f41e754a
+GET http://localhost:5000/users/a24a475c-202e-4024-84a1-6d34f0a8fe24
+
 
 // UPDATE DATA USER BY ID ============================
 ###
-PATCH http://localhost:5000/users/eb128b21-89c9-4fec-af32-0fe0f41e754a
+PATCH http://localhost:5000/users/a24a475c-202e-4024-84a1-6d34f0a8fe24
 Content-Type: application/json
 
 {
-    "name" : "Moces",
-    "email" : "moces@gmail.com",
+    "name" : "Azrizal Ghifary Ridwan",
+    "email" : "azrizal.ridwan@gmail.com",
     "password" : "",
     "confPassword" : "",
-    "role" : "admin"
+    "role" : "user"
 }
 
 ###
-DELETE http://localhost:5000/users/2daee9fa-6df4-47be-83a0-9197104096f5
+DELETE http://localhost:5000/users/eb128b21-89c9-4fec-af32-0fe0f41e754a
+
+###
+// Login User Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "moces@gmail.com",
+    "password" : "fakyu"
+}
+
+###
+// Login User User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "azgif@gmail.com",
+    "password" : "fakyu"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+// Get All data Product
+GET http://localhost:5000/products
+
+###
+// Create Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name" : "Obat Kuat 3",
+    "price" : 10000
+}
+
+###
+// Get data Product From ID
+GET http://localhost:5000/products/593028d0-0a2a-4f2c-8910-c83efd985eb7
+
+###
+###
+// Update Product From ID
+PATCH  http://localhost:5000/products/593028d0-0a2a-4f2c-8910-c83efd985eb7
+Content-Type: application/json
+
+{
+    "name" : "Durex 3",
+    "price" : 10000
+}
+
+###
+DELETE http://localhost:5000/products/593028d0-0a2a-4f2c-8910-c83efd985eb7

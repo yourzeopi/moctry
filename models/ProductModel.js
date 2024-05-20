@@ -28,7 +28,7 @@ const Products = db.define(
       allowNull: false, //field tidak boleh kosong
       validate: {
         notEmpty: true,
-        isEmail: true,
+        // isEmail: true,
       },
     },
     userId: {
